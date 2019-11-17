@@ -1,0 +1,33 @@
+<html>
+<body>
+	<style>
+		* {
+		margin: 0;
+		padding: 0;
+		outline: 0;
+		box-sizing: border-box;
+		background: #000;
+		width: 100%;
+		}
+		html, body, #root {
+			height: 100%;
+		}
+
+		#canvas {
+			border: "1px #fff solid";
+			display: flex;
+			flex-direction: column;
+			max-width: 640px;
+		}
+	</style>
+	<canvas id="canvas"></canvas>
+</body>
+
+<script type="text/javascript" src="jsmpeg/jsmpeg.min.js"></script>
+<script type="text/javascript">
+	player = new JSMpeg.Player('ws://localhost:3333', {
+      canvas: document.getElementById('canvas'), // Canvas should be a canvas DOM element,
+      volume: 10
+	})	
+</script>
+</html>
